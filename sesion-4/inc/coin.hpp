@@ -11,7 +11,7 @@ public:
 
 	bool isClicked() const;
 
-	void draw(sf::RenderWindow& window);
+	void draw(sf::RenderWindow& window) const;
 	void event(const sf::Event& event);
 
 private:

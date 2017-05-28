@@ -14,8 +14,8 @@ void Scene::onPause()  {}
 void Scene::onEnd()    {}
 
 void Scene::update(const sf::Time& deltatime) {}
-void Scene::draw(sf::RenderWindow& window)    {}
-void Scene::event(const sf::Event& event)     {}
+void Scene::draw(sf::RenderWindow& window) const {}
+void Scene::event(const sf::Event& event) {}
 
 void Scene::init() {
 	currentState = INITIALIZED;

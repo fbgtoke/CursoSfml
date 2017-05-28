@@ -16,7 +16,7 @@ public:
 	void onEnd() final;
 
 	void update(const sf::Time& deltatime) final;
-	void draw(sf::RenderWindow& window) final;
+	void draw(sf::RenderWindow& window) const final;
 	void event(const sf::Event& event) final;
 
 private:
@@ -46,8 +46,8 @@ private:
   };
   CursorState cursorState;
 
-	void drawTexts(sf::RenderWindow& window);
-	void drawCursor(sf::RenderWindow& window);
+	void drawTexts(sf::RenderWindow& window) const;
+	void drawCursor(sf::RenderWindow& window) const;
 };
 
 #endif

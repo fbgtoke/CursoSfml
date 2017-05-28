@@ -22,7 +22,7 @@ public:
 	void setTile(unsigned int x, unsigned int y, unsigned int blockIndex);
 	unsigned int getTile(unsigned int x, unsigned int y) const;
 
-	void draw(sf::RenderWindow& window);
+	void draw(sf::RenderWindow& window) const;
 private:
 	static const unsigned int TILE_SIZE;
 

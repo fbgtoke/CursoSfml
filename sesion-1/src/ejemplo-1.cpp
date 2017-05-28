@@ -7,10 +7,10 @@
   Ejemplo 1 - Hello World
   Crea una ventana SFML con unas dimensiones y titulo determinado
 */
-int main(int arg, char* argv[]) {
-  const int screenWidth    = 480;
-  const int screenHeight   = 480;
-  const char screenTitle[] = "Hello World";
+int main() {
+  const int screenWidth  = 480;
+  const int screenHeight = 480;
+  const std::string screenTitle = "Hello World";
 
   sf::RenderWindow window;
   window.create(sf::VideoMode(screenWidth, screenHeight), screenTitle);

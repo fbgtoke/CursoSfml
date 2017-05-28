@@ -9,10 +9,10 @@
   Carga una textura, la aplica sobre un sprite y la muestra
   Carga una pista de audio y la reproduce
 */
-int main(int arg, char* argv[]) {
-  const int screenWidth    = 480;
-  const int screenHeight   = 480;
-  const char screenTitle[] = "Cave Story time";
+int main() {
+  const int screenWidth  = 480;
+  const int screenHeight = 480;
+  const std::string screenTitle = "Cave Story time";
 
   const char TEXTURE_FILE[] = "res/img/quote-1.png";
   const char MUSIC_FILE[]   = "res/audio/cave-story.ogg";
@@ -38,10 +38,6 @@ int main(int arg, char* argv[]) {
   sf::Event event;
 
   while (window.isOpen()) {
-    window.clear(sf::Color::Magenta);
-    window.draw(sprite);
-    window.display();
-
     while (window.pollEvent(event)) {
       if (event.type == sf::Event::Closed)
         window.close();
@@ -57,6 +53,10 @@ int main(int arg, char* argv[]) {
         }
       }
     }
+
+    window.clear(sf::Color::Magenta);
+    window.draw(sprite);
+    window.display();
   }
 
   return 0;

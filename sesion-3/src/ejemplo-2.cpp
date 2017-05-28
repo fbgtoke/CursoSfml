@@ -13,10 +13,10 @@
   Declara e inicializa una animación y la asocia al sprite
   Muestra el AnimatedSprite
 */
-int main(int arg, char* argv[]) {
-  const int screenWidth    = 480;
-  const int screenHeight   = 480;
-  const char screenTitle[] = "Cave Story time";
+int main() {
+  const int screenWidth  = 480;
+  const int screenHeight = 480;
+  const std::string screenTitle = "Cave Story time";
 
   const char TEXTURE_FILE[] = "res/img/quote-2.png";
 
@@ -43,13 +43,6 @@ int main(int arg, char* argv[]) {
   sf::Time deltatime;
 
   while (window.isOpen()) {
-    deltatime = clk.restart();
-    sprite.update(deltatime);
-
-    window.clear(sf::Color::Magenta);
-    window.draw(sprite);
-    window.display();
-
     while (window.pollEvent(event)) {
       if (event.type == sf::Event::Closed)
         window.close();
@@ -65,6 +58,13 @@ int main(int arg, char* argv[]) {
         }
       }
     }
+    
+    deltatime = clk.restart();
+    sprite.update(deltatime);
+
+    window.clear(sf::Color::Magenta);
+    window.draw(sprite);
+    window.display();
   }
 
   return 0;

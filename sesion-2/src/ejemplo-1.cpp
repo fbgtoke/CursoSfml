@@ -12,10 +12,10 @@
   Muestra por linea de comandos el tiempo transcurrido desde el inicio de la 
   ejecucion a cada iteracion del bucle principal
 */
-int main(int arg, char* argv[]) {
-  const int screenWidth    = 480;
-  const int screenHeight   = 480;
-  const char screenTitle[] = "Hello World";
+int main() {
+  const int screenWidth  = 480;
+  const int screenHeight = 480;
+  const std::string screenTitle = "Hello World";
 
   sf::RenderWindow window;
   window.create(sf::VideoMode(screenWidth, screenHeight), screenTitle);
@@ -23,17 +23,9 @@ int main(int arg, char* argv[]) {
   sf::Event event;
 
   sf::Clock clock;
-  sf::Time deltatime;
+  sf::Time elapsedTime;
 
   while (window.isOpen()) {
-    // Logica de estado
-    deltatime = clock.getElapsedTime();
-    std::cout << deltatime.asMilliseconds() << std::endl;
-
-    // Logica de dibujo
-    window.clear(sf::Color::Black);
-    window.display();
-
     // Gestion de eventos
     while (window.pollEvent(event)) {
       if (event.type == sf::Event::Closed)
@@ -50,6 +42,14 @@ int main(int arg, char* argv[]) {
         }
       }
     }
+    
+    // Logica de estado
+    elapsedTime = clock.getElapsedTime();
+    std::cout << elapsedTime.asMilliseconds() << std::endl;
+
+    // Logica de dibujo
+    window.clear(sf::Color::Black);
+    window.display();
   }
 
   return 0;

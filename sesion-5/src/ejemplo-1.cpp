@@ -5,7 +5,7 @@
   Crea una ventana SFML con unas dimensiones y titulo determinado
   Muestra la escena del menu principal
 */
-int main(int arg, char* argv[]) {
+int main() {
   Game game;
   game.run();
 

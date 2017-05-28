@@ -3,7 +3,7 @@
 /**
   Ejercicio 1 - Player
 */
-int main(int arg, char* argv[]) {
+int main() {
   Game game;
   game.run();
 

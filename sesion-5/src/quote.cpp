@@ -50,7 +50,7 @@ void Quote::update(const sf::Time& deltatime) {
 		sprite->move(-50 * seconds, 0.0f);
 }
 
-void Quote::draw(sf::RenderWindow& window) {
+void Quote::draw(sf::RenderWindow& window) const {
 	window.draw(*sprite);
 }
 

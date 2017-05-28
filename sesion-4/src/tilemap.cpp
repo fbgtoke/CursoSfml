@@ -43,7 +43,7 @@ unsigned int Tilemap::getTile(unsigned int x, unsigned int y) const {
 	}
 }
 
-void Tilemap::draw(sf::RenderWindow& window) {
+void Tilemap::draw(sf::RenderWindow& window) const {
 	sf::Sprite sprite;
 
 	sprite.setTexture(background);

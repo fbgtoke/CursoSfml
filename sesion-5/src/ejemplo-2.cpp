@@ -6,7 +6,7 @@
   Cambia entre las diversas escenas de la clase Game segun las acciones del 
   usuario
 */
-int main(int arg, char* argv[]) {
+int main() {
   Game game;
   game.run();
 

@@ -13,7 +13,7 @@ public:
 private:
   static const int screenWidth;
   static const int screenHeight;
-  static const char screenTitle[];
+  static const std::string screenTitle;
 
   sf::RenderWindow window;
   sf::Clock clk;

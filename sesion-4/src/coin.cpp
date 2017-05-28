@@ -18,7 +18,7 @@ void Coin::setPosition(const sf::Vector2i& position) {
 
 bool Coin::isClicked() const { return clicked; }
 
-void Coin::draw(sf::RenderWindow& window) {
+void Coin::draw(sf::RenderWindow& window) const {
 	if (!isClicked()) {
 		sf::Sprite sprite(texture);
 		sprite.setPosition(position.x, position.y);

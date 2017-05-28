@@ -7,7 +7,7 @@
   Los elementos interactuables estan animados y reaccionan cuando el jugador 
   hace click izquierdo sobre ellos
 */
-int main(int arg, char* argv[]) {
+int main() {
   Game game;
   game.run();
 

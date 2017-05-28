@@ -48,7 +48,7 @@ void MainMenu::update(const sf::Time& deltatime) {
 
 }
 
-void MainMenu::draw(sf::RenderWindow& window) {
+void MainMenu::draw(sf::RenderWindow& window) const {
 	drawTexts(window);
 	drawCursor(window);
 }
@@ -92,7 +92,7 @@ void MainMenu::event(const sf::Event& event) {
   }
 }
 
-void MainMenu::drawTexts(sf::RenderWindow& window) {
+void MainMenu::drawTexts(sf::RenderWindow& window) const {
   sf::Text text;
   text.setFont(font);
   text.setColor(FONT_COLOR);
@@ -115,7 +115,7 @@ void MainMenu::drawTexts(sf::RenderWindow& window) {
   window.draw(text);
 }
 
-void MainMenu::drawCursor(sf::RenderWindow& window) {
+void MainMenu::drawCursor(sf::RenderWindow& window) const {
   sf::Sprite sprite(textureCursor);
 
   sprite.move(PADDING);

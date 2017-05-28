@@ -9,9 +9,9 @@
   Ejemplo 2 - Encapsulacion
   Distribuye el codigo del ejemplo-1 en diversas funciones
 */
-const int screenWidth    = 480;
-const int screenHeight   = 480;
-const char screenTitle[] = "Hello World";
+const int screenWidth  = 480;
+const int screenHeight = 480;
+const std::string screenTitle = "Hello World";
 
 sf::RenderWindow window;
 sf::Clock clk;
@@ -53,18 +53,18 @@ void events() {
   }
 }
 
-int main(int arg, char* argv[]) {
+int main() {
   init();
 
   while (window.isOpen()) {
+    // Gestion de eventos
+    events();
+
     // Logica de estado
     update();
 
     // Logica de dibujo
     draw();
-
-    // Gestion de eventos
-    events();
   }
 
   return 0;

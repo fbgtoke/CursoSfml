@@ -67,7 +67,7 @@ void Canica::update(const sf::Time& deltatime) {
 	}
 }
 
-void Canica::draw(sf::RenderWindow& window) {
+void Canica::draw(sf::RenderWindow& window) const {
 	sf::CircleShape circle;
 	circle.setRadius(Canica::RADIUS);
 	circle.setPosition(pos.x - Canica::RADIUS, pos.y - Canica::RADIUS);

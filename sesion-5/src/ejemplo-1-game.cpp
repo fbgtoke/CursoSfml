@@ -1,8 +1,8 @@
 #include "ejemplo-1-game.hpp"
 
-const int Game::screenWidth    = 480;
-const int Game::screenHeight   = 480;
-const char Game::screenTitle[] = "Hello World";
+const int Game::screenWidth  = 480;
+const int Game::screenHeight = 480;
+const std::string Game::screenTitle = "Hello World";
 
 const std::string Game::FONT_FILE = "res/fonts/font.ttf";
 const float Game::FONT_SCALE = 1.5f;
@@ -39,14 +39,14 @@ void Game::init() {
 
 void Game::mainLoop() {
   while (window.isOpen()) {
+    // Gestion de eventos
+    events();
+    
     // Logica de estado
     update();
 
     // Logica de dibujo
     draw();
-
-    // Gestion de eventos
-    events();
   }
 }
 

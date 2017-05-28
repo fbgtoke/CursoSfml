@@ -9,7 +9,7 @@ public:
 	Canica(const sf::Vector2f& position);
 
 	void update(const sf::Time& deltatime);
-	void draw(sf::RenderWindow& window);
+	void draw(sf::RenderWindow& window) const;
 
 	void setPosition(const sf::Vector2f& position);
 	void setVelocity(const sf::Vector2f& velocity);

@@ -12,10 +12,10 @@
   La ventana responde al evento de cerrar (click sobre X)
   Responde a eventos de teclado
 */
-int main(int arg, char* argv[]) {
-  const int screenWidth    = 480;
-  const int screenHeight   = 480;
-  const char screenTitle[] = "Hello World";
+int main() {
+  const int screenWidth  = 480;
+  const int screenHeight = 480;
+  const std::string screenTitle = "Hello World";
 
   sf::RenderWindow window;
   window.create(sf::VideoMode(screenWidth, screenHeight), screenTitle);
@@ -28,10 +28,6 @@ int main(int arg, char* argv[]) {
   sf::Event event;
 
   while (window.isOpen()) {
-    window.clear(sf::Color::Black);
-    window.draw(circle);
-    window.display();
-
     while (window.pollEvent(event)) {
       if (event.type == sf::Event::Closed)
         window.close();
@@ -63,6 +59,10 @@ int main(int arg, char* argv[]) {
         }
       }
     }
+
+    window.clear(sf::Color::Black);
+    window.draw(circle);
+    window.display();
   }
 
   return 0;

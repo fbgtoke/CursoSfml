@@ -5,7 +5,7 @@
   Crea una ventana SFML con unas dimensiones y titulo determinado
   Instancia un objeto de la clase Quote que responde a las acciones del usuario
 */
-int main(int arg, char* argv[]) {
+int main() {
   Game game;
   game.run();
 

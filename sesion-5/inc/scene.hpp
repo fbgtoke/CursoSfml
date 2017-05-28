@@ -19,7 +19,7 @@ public:
 	virtual void onEnd();
 
 	virtual void update(const sf::Time& deltatime);
-	virtual void draw(sf::RenderWindow& window);
+	virtual void draw(sf::RenderWindow& window) const;
 	virtual void event(const sf::Event& event);
 
 	void init();
